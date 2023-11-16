@@ -1,0 +1,97 @@
+@import '../../utils/scss/mixins.scss';
+
+.active-todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 7px;
+    font-size: 1.5rem;
+    min-height: 53px;
+    margin-bottom: 6px;
+
+    &__editing-form {
+        position: relative;
+    }
+
+    &__editing-submit {
+        position: absolute;
+        background: none;
+        border: none;
+        outline: none;
+    }
+
+    &__editing-textarea {
+        font-family: sans-serif;
+        padding: 16px 17px 16px 17px;
+        max-width: 100%;
+        min-width: 100%;
+        border-radius: 7px;
+        border: none;
+        outline: none;
+        font-size: 1.5rem;
+        text-indent: 32px;
+        margin-bottom: 6px;
+        resize: none;
+        @include common;
+
+        &::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        &::-webkit-scrollbar-track {
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        &::-webkit-scrollbar-thumb:active {
+            background: rgba(0, 0, 0, .9);
+        }
+    }
+
+    &__text {
+        margin: 16px 0;
+        width: 90%;
+        word-break: break-word;
+    }
+
+    &__manage {
+        display: flex;
+        flex-direction: row;
+        margin: 20px 16px;
+        gap: 8px;
+    }
+
+    &_common {
+        @include common;
+    }
+
+    &_rare {
+        @include rare;
+    }
+
+    &_epic {
+        @include epic;
+    }
+
+    &__icon {
+        width: 17px;
+
+        &_white {
+            filter: invert(99%) sepia(1%) saturate(2%) hue-rotate(152deg) brightness(109%) contrast(100%);
+        }
+
+        &_grey {
+            filter: invert(36%) sepia(7%) saturate(354%) hue-rotate(169deg) brightness(96%) contrast(91%);
+        }
+    }
+}

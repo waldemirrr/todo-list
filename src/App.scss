@@ -1,0 +1,37 @@
+@import './utils/scss/variables.scss';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background: $color-background-dark;
+}
+
+.app {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 800px;
+}
+
+.todo-form-wrapper {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.form-wrapper {
+  padding-bottom: 10px;
+}
+
+.todo-list-wrapper {
+  padding-bottom: 20px;
+}

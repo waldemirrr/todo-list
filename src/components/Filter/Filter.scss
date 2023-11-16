@@ -1,0 +1,37 @@
+@import '../../utils/scss/mixins.scss';
+
+
+.filter-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-button {
+    @include inactive;
+    display: inline-block;
+    border: none;
+    padding: 5px;
+    border-radius: 7px;
+    margin: 0 10px 10px 0;
+
+    &_all {
+        @include all;
+    }
+
+    &_common {
+        @include common;
+    }
+
+    &_rare {
+        @include rare;
+    }
+
+    &_epic {
+        @include epic;
+    }
+
+    &__delete-completed {
+        margin-right: 0;
+        @include delete-completed;
+    }
+}

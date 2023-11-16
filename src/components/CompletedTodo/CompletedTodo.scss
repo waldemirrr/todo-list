@@ -1,0 +1,25 @@
+@import '../../utils/scss/mixins.scss';
+
+.completed-todo {
+    @include completed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 7px;
+    font-size: 1.5rem;
+    min-height: 53px;
+    margin-bottom: 6px;
+
+
+    &__text {
+        margin: 16px 0;
+        width: 90%;
+        word-break: break-word;
+    }
+
+    &__icon {
+        width: 17px;
+        margin: 16px 16px;
+        filter: invert(65%) sepia(83%) saturate(0%) hue-rotate(243deg) brightness(95%) contrast(82%);
+    }
+}
